@@ -1,0 +1,576 @@
+{
+  "predictions": [
+    {
+      "id": "1",
+      "user_email": "bhavishreddy001@gmail.com",
+      "timestamp": "2026-02-04T23:40:05.448288",
+      "input": {
+        "latitude": 26.913958,
+        "longitude": 75.794678,
+        "crop_name": "Bajra",
+        "field_size_hectares": 100,
+        "planting_date": "2026-01-01",
+        "irrigation_type": "Sprinkler",
+        "previous_crop": "Wheat",
+        "farming_experience": "Intermediate",
+        "budget_level": "Medium"
+      },
+      "location": {
+        "latitude": 26.913958,
+        "longitude": 75.794678,
+        "address": "Jaipur, Jaipur Municipal Corporation, Jaipur Tehsil, Jaipur, Rajasthan, 302001, India",
+        "city": "Jaipur",
+        "region": "Rajasthan",
+        "country": "India",
+        "country_code": "IN"
+      },
+      "weather": {
+        "temperature_avg": 15,
+        "temperature_min": 10.9,
+        "temperature_max": 23.8,
+        "humidity": 64,
+        "precipitation": 0,
+        "wind_speed": 3.1,
+        "soil_moisture": 0.095,
+        "uv_index": 5.4,
+        "weather_description": null
+      },
+      "soil": {
+        "soil_type": "Sandy Loam",
+        "ph_level": 8.1,
+        "nitrogen": 185.5,
+        "phosphorus": 22.4,
+        "potassium": 315,
+        "organic_matter": 0.65
+      },
+      "yield_prediction": {
+        "crop_name": "Bajra",
+        "predicted_yield_kg_per_hectare": 1650,
+        "confidence_level": "Medium",
+        "growing_season_days": 95,
+        "risk_factors": [
+          "Low soil temperature during January planting affecting germination",
+          "Potential frost risk in early growth stages",
+          "High soil pH (8.1) potentially limiting micronutrient uptake",
+          "Low organic matter content (0.65%)",
+          "Increased water demand during grain filling as temperatures rise in March"
+        ],
+        "yield_range_min": 1450,
+        "yield_range_max": 1950,
+        "optimal_harvest_window": "Late March to Early April"
+      },
+      "optimizations": [
+        {
+          "category": "Seed Treatment",
+          "recommendation": "To counter low soil temperatures during January planting and ensure uniform germination, treat seeds with a combination of fungicide and bio-stimulant. This protects against soil-borne pathogens that thrive in slow-germinating conditions and provides early-stage vigor.",
+          "expected_improvement": "10-15% increase in plant stand and early vigor",
+          "priority": "High",
+          "products": [
+            {
+              "name": "UPL Sprint",
+              "type": "fungicide",
+              "description": "A mixture of Mancozeb and Carbendazim that provides systemic and contact protection against seed-rot and seedling blight.",
+              "application_rate": "2.0 - 2.5 grams per kg of seed",
+              "purchase_link": "https://www.bighaat.com/search?q=upl+sprint",
+              "image_url": "http://agrivruddhi.com/cdn/shop/files/Sprint_Fungicide_-_AV.png?v=1761117669",
+              "price_range": "\u20b9350 - \u20b91,450"
+            },
+            {
+              "name": "Bayer Gaucho",
+              "type": "insecticide",
+              "description": "Contains Imidacloprid for systemic protection against early-season sucking pests like shoot fly, common in Rajasthan.",
+              "application_rate": "5.0 ml per kg of seed",
+              "purchase_link": "https://www.bighaat.com/search?q=Bayer+Gaucho",
+              "image_url": "https://agroplasm.com/wp-content/uploads/2025/06/gaucho-600-fs-file-6951.png",
+              "price_range": "\u20b9550 - \u20b92,600"
+            }
+          ]
+        },
+        {
+          "category": "Soil Management",
+          "recommendation": "The soil pH of 8.1 is alkaline, which significantly restricts the availability of Zinc and Iron. Apply chelated micronutrients to ensure uptake despite the high pH. Additionally, incorporate organic matter to buffer the pH over time.",
+          "expected_improvement": "15-20% improvement in grain weight and nutrient density",
+          "priority": "High",
+          "products": [
+            {
+              "name": "Tata Rallis Librel Zn",
+              "type": "fertilizer",
+              "description": "EDTA chelated Zinc (12%) which remains available to the plant even in high pH (alkaline) soils.",
+              "application_rate": "500 grams per acre via soil application or 1 gram per liter as foliar spray",
+              "purchase_link": "https://www.bighaat.com/search?q=Tata+Rallis+Librel+Zn",
+              "image_url": "https://www.kisanshop.in/uploads/basf-librel-zn-fertilizer-500-gm.webp",
+              "price_range": "\u20b9280 - \u20b9650"
+            },
+            {
+              "name": "Coromandel Gromor Sulphur",
+              "type": "soil conditioner",
+              "description": "Bentonite Sulphur helps in slightly lowering the rhizosphere pH and improves Nitrogen use efficiency.",
+              "application_rate": "10 kg per acre as basal dose",
+              "purchase_link": "https://www.bighaat.com/search?q=Coromandel+Gromor+Sulphur",
+              "image_url": "https://www.coromandel.biz/wp-content/uploads/2025/03/Gromor-Sulphur.png",
+              "price_range": "\u20b9650 - \u20b91,500"
+            }
+          ]
+        },
+        {
+          "category": "Fertilization",
+          "recommendation": "Given the low Phosphorus (22.4 kg/ha) and low Organic Matter (0.65%), a strong basal dose of Phosphatic fertilizer combined with seaweed-based bio-stimulants is essential for root development in cold January soils.",
+          "expected_improvement": "20% increase in root mass and drought tolerance",
+          "priority": "High",
+          "products": [
+            {
+              "name": "IFFCO DAP (Di-Ammonium Phosphate)",
+              "type": "fertilizer",
+              "description": "Provides essential basal Nitrogen and high Phosphorus for early root establishment.",
+              "application_rate": "75-100 kg per hectare at the time of sowing",
+              "purchase_link": "https://www.bighaat.com/search?q=IFFCO+DAP",
+              "image_url": "https://kissanemart.com/storage/iffco-dap-major-nutrient.jpg",
+              "price_range": "\u20b9150 - \u20b91,350"
+            },
+            {
+              "name": "IFFCO Sagarika",
+              "type": "bio-stimulant",
+              "description": "Seaweed extract granules that enhance nutrient uptake and help the crop withstand abiotic stress like cold and frost.",
+              "application_rate": "10 kg per acre (25 kg per hectare)",
+              "purchase_link": "https://www.bighaat.com/search?q=IFFCO+Sagarika",
+              "image_url": "https://dujjhct8zer0r.cloudfront.net/media/prod_image/12623486131750235318.webp",
+              "price_range": "\u20b9260 - \u20b9550"
+            }
+          ]
+        },
+        {
+          "category": "Irrigation",
+          "recommendation": "As temperatures rise in March during the grain-filling stage, the sandy loam soil will lose moisture rapidly. Use a starch-based hydrogel to increase the water-holding capacity of the soil and reduce irrigation frequency.",
+          "expected_improvement": "25% reduction in water stress during critical growth stages",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "UPL Zeba",
+              "type": "soil amendment",
+              "description": "A starch-based super-absorbent that retains water and nutrients in the root zone and releases them as needed.",
+              "application_rate": "5 kg per acre (12.5 kg per hectare) mixed with basal fertilizer",
+              "purchase_link": "https://www.bighaat.com/search?q=upl+zeba",
+              "image_url": "https://in.upl-ltd.com/product_images/Zeba.png",
+              "price_range": "\u20b9450 - \u20b95,200"
+            }
+          ]
+        },
+        {
+          "category": "Crop Protection",
+          "recommendation": "To mitigate frost risk in early growth stages (late Jan/early Feb), apply a foliar spray of Potassium Nitrate. Potassium regulates stomatal activity and increases the salt concentration in cell sap, lowering the freezing point of the plant tissue.",
+          "expected_improvement": "Protection against frost damage and improved grain filling",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "Zuari Agro Jai Kisaan NPK 13:00:45",
+              "type": "fertilizer",
+              "description": "Water-soluble Potassium Nitrate that provides immediate Potassium for frost resistance and stress tolerance.",
+              "application_rate": "10-15 grams per liter of water sprayed during cold waves",
+              "purchase_link": "https://www.bighaat.com/search?q=Jai+Kisaan+NPK+13:00:45",
+              "image_url": "https://5.imimg.com/data5/WI/GC/ZT/SELLER-2817736/00011111.jpg",
+              "price_range": "\u20b9180 - \u20b9250 per kg"
+            }
+          ]
+        },
+        {
+          "category": "Pest Control",
+          "recommendation": "Monitor for Shoot Fly and Stem Borer, which are prevalent in Bajra. Given the intermediate experience level, a preventative systemic application is safer than reactive measures.",
+          "expected_improvement": "10-12% yield protection from pest-induced 'dead hearts'",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "Syngenta Virtako",
+              "type": "insecticide",
+              "description": "A granular insecticide providing long-duration control of stem borer and shoot fly.",
+              "application_rate": "4 kg per acre (10 kg per hectare) at 20-30 days after sowing",
+              "purchase_link": "https://www.bighaat.com/search?q=Syngenta+Virtako",
+              "image_url": "https://agrivruddhi.com/cdn/shop/files/Virtako_-AV.png?v=1761217604&width=360",
+              "price_range": "\u20b9210 - \u20b95,400 INR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "user_email": "dhanyancdhanyaa@gmail.com",
+      "timestamp": "2026-02-05T00:44:15.975986",
+      "input": {
+        "latitude": 31.026312,
+        "longitude": 77.189941,
+        "crop_name": "Apple",
+        "field_size_hectares": 5,
+        "planting_date": "2010-12-06",
+        "irrigation_type": "Flood",
+        "previous_crop": "Oranges",
+        "farming_experience": "Intermediate",
+        "budget_level": "Premium"
+      },
+      "location": {
+        "latitude": 31.026312,
+        "longitude": 77.189941,
+        "address": "Shimla Chail Road, Dhalana, Junga, Shimla, Himachal Pradesh, 171219, India",
+        "city": "Junga",
+        "region": "Himachal Pradesh",
+        "country": "India",
+        "country_code": "IN"
+      },
+      "weather": {
+        "temperature_avg": 9,
+        "temperature_min": 8.1,
+        "temperature_max": 18.4,
+        "humidity": 71,
+        "precipitation": 0,
+        "wind_speed": 8,
+        "soil_moisture": 0.238,
+        "uv_index": 4.75,
+        "weather_description": null
+      },
+      "soil": {
+        "soil_type": "Loamy",
+        "ph_level": 6.2,
+        "nitrogen": 315.5,
+        "phosphorus": 24.8,
+        "potassium": 285,
+        "organic_matter": 3.4
+      },
+      "yield_prediction": {
+        "crop_name": "Apple",
+        "predicted_yield_kg_per_hectare": 14500,
+        "confidence_level": "High",
+        "growing_season_days": 240,
+        "risk_factors": [
+          "Insufficient chilling hours due to rising winter temperatures",
+          "Risk of hailstorms during the fruit-set stage (April-May)",
+          "Inefficiency of flood irrigation leading to potential root rot or water stress",
+          "Susceptibility to Apple Scab or Powdery Mildew given 71% humidity levels",
+          "Potential nutrient imbalance from previous citrus cultivation"
+        ],
+        "yield_range_min": 11500,
+        "yield_range_max": 18500,
+        "optimal_harvest_window": "Late July to Early September"
+      },
+      "optimizations": [
+        {
+          "category": "Growth Regulation",
+          "recommendation": "To compensate for the insufficient chilling hours caused by rising winter temperatures in Junga, apply dormancy-breaking agents. This ensures uniform bud break and flowering, which is critical for maintaining yield in warming climates.",
+          "expected_improvement": "15-20% increase in fruit set uniformity and yield",
+          "priority": "High",
+          "products": [
+            {
+              "name": "UPL Dormex",
+              "type": "Growth Regulator",
+              "description": "Contains Hydrogen Cyanamide which acts as a substitute for winter chilling, promoting uniform bud break.",
+              "application_rate": "Apply as a 3% to 5% solution (30-50 ml per liter of water) using a high-volume sprayer 30-45 days before the expected bud break.",
+              "purchase_link": "https://www.bighaat.com/search?q=upl+dormex",
+              "image_url": "https://cdn.nufarm.com/wp-content/uploads/sites/22/2018/05/06090855/ATHENA_DORMEX_10L_WEBTILES_MAY_22-1.png",
+              "price_range": "\u20b9950 - \u20b91,850"
+            }
+          ]
+        },
+        {
+          "category": "Pest Control",
+          "recommendation": "Given the 71% humidity and historical susceptibility, implement a proactive fungicide schedule to prevent Apple Scab (Venturia inaequalis) and Powdery Mildew. High humidity in the Himachal region significantly increases fungal pressure during the pink bud and petal fall stages.",
+          "expected_improvement": "25% reduction in fruit russeting and leaf drop",
+          "priority": "High",
+          "products": [
+            {
+              "name": "Bayer Nativo",
+              "type": "Fungicide",
+              "description": "A combination of Tebuconazole and Trifloxystrobin providing both systemic and contact protection against Scab and Powdery Mildew.",
+              "application_rate": "0.4 grams per liter of water (80g per 200L drum) at the pink bud stage and again at fruit-set.",
+              "purchase_link": "https://www.bighaat.com/search?q=Bayer+Nativo",
+              "image_url": "https://cdn2.zohoecommerce.com/product-images/nativo+by+bayer.png/1477796000005746069/800x800?storefront_domain=www.krushivista.com",
+              "price_range": "\u20b9850 - \u20b92,150"
+            },
+            {
+              "name": "Syngenta Score",
+              "type": "Fungicide",
+              "description": "Contains Difenoconazole, a highly effective systemic fungicide for curative and preventive control of Apple Scab.",
+              "application_rate": "30 ml per 100 liters of water during the primary scab infection period (April-May).",
+              "purchase_link": "https://www.bighaat.com/search?q=syngenta+score",
+              "image_url": "https://www.navadhanyaagroseeds.com/storage/products/Syngenta-Score1.jpg",
+              "price_range": "\u20b9285 - \u20b91,350"
+            }
+          ]
+        },
+        {
+          "category": "Irrigation",
+          "recommendation": "Transition from flood irrigation to a precision Drip Irrigation system. Flood irrigation in loamy soils like Junga's can lead to Phytophthora root rot and inefficient nutrient uptake. Drip systems will manage water stress during the critical fruit expansion phase.",
+          "expected_improvement": "30% water saving and 15% better fruit sizing",
+          "priority": "High",
+          "products": [
+            {
+              "name": "Netafim Drip Irrigation System",
+              "type": "Irrigation Infrastructure",
+              "description": "Precision pressure-compensating drippers designed for hilly terrains to ensure uniform water delivery.",
+              "application_rate": "Install 2-4 drippers per tree (4 LPH each) scheduled for 2-3 hours every alternate day during dry spells.",
+              "purchase_link": "https://www.bighaat.com/search?q=netafim",
+              "image_url": "https://www.netafim.com/cdn-cgi/image/format=auto,fit=crop,quality=80,width=750/globalassets/products/les/new/hero-banner-new.png?v=492c55",
+              "price_range": "\u20b91,800 - \u20b945,000"
+            }
+          ]
+        },
+        {
+          "category": "Fertilization",
+          "recommendation": "Address the low Phosphorus levels (24.8) and potential nutrient imbalance from previous citrus cultivation. Focus on Phosphorus for root strength and Boron/Calcium for fruit firmness and to prevent 'Bitter Pit'.",
+          "expected_improvement": "10-15% improvement in fruit quality and storage life",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "Coromandel Gromor 12:32:16",
+              "type": "Fertilizer",
+              "description": "Complex fertilizer to boost Phosphorus levels which are currently low in the soil profile.",
+              "application_rate": "500g to 1kg per tree as a soil application during the dormant phase (January-February).",
+              "purchase_link": "https://www.bighaat.com/search?q=Coromandel+Gromor+12%3A32%3A16",
+              "image_url": "https://www.coromandel.biz/wp-content/uploads/2025/03/c_Packshot_Side_12-32-16.webp",
+              "price_range": "\u20b9150 - \u20b91,650"
+            },
+            {
+              "name": "Tata Rallis Solubor",
+              "type": "Micronutrient",
+              "description": "High-quality Boron to improve pollination, fruit set, and prevent internal corking.",
+              "application_rate": "1 gram per liter of water as a foliar spray at the pre-pink bud stage and again at petal fall.",
+              "purchase_link": "https://www.bighaat.com/search?q=Tata+Rallis+Solubor",
+              "image_url": "https://dujjhct8zer0r.cloudfront.net/media/prod_image/9774706001758531428.webp",
+              "price_range": "\u20b9180 - \u20b9650"
+            }
+          ]
+        },
+        {
+          "category": "Physical Protection",
+          "recommendation": "Install Anti-Hail Nets to mitigate the high risk of hailstorms during the April-May fruit-set stage. In Himachal Pradesh, a single hailstorm can destroy up to 80% of the crop; nets are a essential premium investment for high-value apple orchards.",
+          "expected_improvement": "Protection against 90% of hail-related crop loss",
+          "priority": "High",
+          "products": [
+            {
+              "name": "Garware Anti-Hail Nets",
+              "type": "Protective Infrastructure",
+              "description": "UV-stabilized HDPE nets designed to protect the canopy from hail impact and excessive solar radiation.",
+              "application_rate": "Permanent installation over the orchard canopy using galvanized steel or wooden supports before the April hail season.",
+              "purchase_link": "https://www.indiamart.com/search.mp?ss=Garware+Anti+Hail+Net",
+              "image_url": "https://www.garwarefibres.com/sites/default/files/images/solutions/Anti%20Hail%20Net.jpg",
+              "price_range": "\u20b935 - \u20b960 per square meter"
+            }
+          ]
+        },
+        {
+          "category": "Soil Management",
+          "recommendation": "Enhance soil structure and microbial activity to counteract the 'citrus-to-apple' transition stress. Use organic biostimulants to improve the 3.4% organic matter efficiency and stabilize soil pH.",
+          "expected_improvement": "Improved nutrient bioavailability and root vigor",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "UPL Macarena",
+              "type": "Biostimulant",
+              "description": "A seaweed-based biostimulant that enhances plant metabolism and stress tolerance.",
+              "application_rate": "2 ml per liter of water as a foliar spray during the fruit development stage.",
+              "purchase_link": "https://www.bighaat.com/search?q=UPL+Macarena",
+              "image_url": "http://agrivruddhi.com/cdn/shop/files/Macarena_Bio_Stimulant_-AV.png?v=1761374524",
+              "price_range": "\u20b9575 - \u20b91,950"
+            },
+            {
+              "name": "IFFCO Sagarika",
+              "type": "Organic Fertilizer",
+              "description": "Seaweed extract granules that improve soil health and nutrient uptake efficiency.",
+              "application_rate": "250g per tree applied to the soil basin during the onset of the monsoon or early spring.",
+              "purchase_link": "https://www.bighaat.com/search?q=IFFCO+Sagarika",
+              "image_url": "http://iffco-public-assets.s3.ap-south-1.amazonaws.com/s3fs-public/2022-05/Sagarika-bucket_2_0.png",
+              "price_range": "\u20b9260 - \u20b9550"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "user_email": "dhanyancdhanya@gmail.com",
+      "timestamp": "2026-02-05T00:55:42.264209",
+      "input": {
+        "latitude": 31.091383,
+        "longitude": 77.184448,
+        "crop_name": "Apple",
+        "field_size_hectares": 25,
+        "planting_date": "2003-09-06",
+        "irrigation_type": "Flood",
+        "previous_crop": "Oranges",
+        "farming_experience": "Experienced",
+        "budget_level": "Premium"
+      },
+      "location": {
+        "latitude": 31.091383,
+        "longitude": 77.184448,
+        "address": "Chota Shimla, Shanan, Shimla (urban), Shimla, Himachal Pradesh, 171002, India",
+        "city": "Shimla (urban)",
+        "region": "Himachal Pradesh",
+        "country": "India",
+        "country_code": "IN"
+      },
+      "weather": {
+        "temperature_avg": 5.8,
+        "temperature_min": 4.9,
+        "temperature_max": 13.9,
+        "humidity": 68,
+        "precipitation": 0,
+        "wind_speed": 9,
+        "soil_moisture": 0.276,
+        "uv_index": 4.8,
+        "weather_description": null
+      },
+      "soil": {
+        "soil_type": "Loamy",
+        "ph_level": 6.2,
+        "nitrogen": 315.5,
+        "phosphorus": 24.8,
+        "potassium": 390.2,
+        "organic_matter": 3.6
+      },
+      "yield_prediction": {
+        "crop_name": "Apple",
+        "predicted_yield_kg_per_hectare": 18500,
+        "confidence_level": "High",
+        "growing_season_days": 165,
+        "risk_factors": [
+          "Hailstorm damage during fruit development",
+          "Apple Scab (Venturia inaequalis) due to humidity levels",
+          "Soil erosion and nutrient leaching from flood irrigation on hilly terrain",
+          "Late spring frost risk during the flowering stage"
+        ],
+        "yield_range_min": 15500,
+        "yield_range_max": 21500,
+        "optimal_harvest_window": "Late August to Mid-September"
+      },
+      "optimizations": [
+        {
+          "category": "Disease Management",
+          "recommendation": "Implement a proactive fungicide spray schedule to combat Apple Scab (Venturia inaequalis), especially given the high humidity levels in Shimla. Use a combination of systemic and contact fungicides during the green tip to fruit development stages.",
+          "expected_improvement": "15-20% reduction in fruit loss and improved grade quality",
+          "priority": "High",
+          "products": [
+            {
+              "name": "Bayer Luna Experience",
+              "type": "fungicide",
+              "description": "A combination of Fluopyram and Tebuconazole providing both systemic and translaminar action against Apple Scab and Powdery Mildew.",
+              "application_rate": "0.5 ml per liter of water during the pink bud stage and petal fall.",
+              "purchase_link": "https://www.bighaat.com/search?q=Bayer+Luna+Experience",
+              "image_url": "https://chemicalwarehouse.com/cdn/shop/products/LunaEXP_ChemicalWarehouse_97b984aa-3bf1-440c-87bd-1a2758e83a37_700x700.jpg?v=1701317858",
+              "price_range": "\u20b9745 - \u20b95,750"
+            },
+            {
+              "name": "Syngenta Score",
+              "type": "fungicide",
+              "description": "Contains Difenoconazole, a highly effective systemic fungicide for curative and preventive control of Scab.",
+              "application_rate": "0.3 ml per liter of water at 10-14 day intervals during high-risk periods.",
+              "purchase_link": "https://www.bighaat.com/search?q=syngenta+score",
+              "image_url": "https://www.navadhanyaagroseeds.com/storage/products/Syngenta-Score1.jpg",
+              "price_range": "\u20b9350 - \u20b91,750"
+            }
+          ]
+        },
+        {
+          "category": "Irrigation & Soil Management",
+          "recommendation": "Transition from flood irrigation to a precision Drip Irrigation system. This is critical for hilly terrains like Shimla to prevent soil erosion and nutrient leaching (specifically Nitrogen and Potassium) while ensuring uniform moisture during fruit sizing.",
+          "expected_improvement": "25-30% water saving and 15% better nutrient uptake efficiency",
+          "priority": "High",
+          "products": [
+            {
+              "name": "Netafim Drip Irrigation System",
+              "type": "irrigation equipment",
+              "description": "Pressure-compensated drippers designed for undulating hilly terrain to ensure uniform water delivery.",
+              "application_rate": "Custom layout based on tree spacing (typically 4-8 liters per hour per tree).",
+              "purchase_link": "https://www.bighaat.com/search?q=Netafim+Drip+Irrigation",
+              "image_url": "https://www.netafimusa.com/cdn-cgi/image/format=auto,fit=crop,quality=80,width=750/globalassets/products/precision_irrigation_solutions_header.jpg?v=48ed70",
+              "price_range": "\u20b91,200 - \u20b99,500"
+            }
+          ]
+        },
+        {
+          "category": "Fertilization",
+          "recommendation": "Address the low Phosphorus (P) levels and optimize fruit quality with Calcium and Boron. Since Potassium (K) is already high, focus on balanced uptake rather than heavy K application.",
+          "expected_improvement": "10-12% increase in fruit firmness and shelf life",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "YaraLiva Nitrabor",
+              "type": "fertilizer",
+              "description": "Calcium Nitrate with Boron to improve fruit set, reduce bitter pit, and enhance skin finish.",
+              "application_rate": "250-500g per tree depending on age, applied during the fruit set stage.",
+              "purchase_link": "https://www.bighaat.com/search?q=YaraLiva+Nitrabor",
+              "image_url": "https://yaraurl.net/mzq",
+              "price_range": "\u20b91,650 - \u20b91,950"
+            },
+            {
+              "name": "IFFCO Water Soluble NPK (12:61:00)",
+              "type": "fertilizer",
+              "description": "Mono Ammonium Phosphate (MAP) to boost Phosphorus levels during early root and flower development.",
+              "application_rate": "5-7 kg per hectare via fertigation during the pre-bloom stage.",
+              "purchase_link": "https://www.bighaat.com/search?q=IFFCO+NPK+12%3A61%3A00",
+              "image_url": "http://iffco-public-assets.s3.ap-south-1.amazonaws.com/s3fs-public/2022-02/Mono%20Ammonium%20phosphate%20Front.png",
+              "price_range": "\u20b9180 - \u20b9250 (per 1 kg)"
+            }
+          ]
+        },
+        {
+          "category": "Risk Mitigation",
+          "recommendation": "Install anti-hail nets to protect the crop from hailstorm damage, which is a significant risk in Himachal Pradesh. Additionally, use bio-stimulants to help the trees recover from cold stress and late spring frost.",
+          "expected_improvement": "Protection of up to 90% of the crop from physical hail damage",
+          "priority": "High",
+          "products": [
+            {
+              "name": "Garware Anti-Hail Nets",
+              "type": "protective equipment",
+              "description": "High-density polyethylene (HDPE) nets to provide physical protection against hail and excessive UV radiation.",
+              "application_rate": "Complete canopy coverage prior to the hail-prone season (March-May).",
+              "purchase_link": "https://www.indiamart.com/isearch.php?s=garware+anti+hail+net",
+              "image_url": "https://www.garwarefibres.com/sites/default/files/images/solutions/Anti%20Hail%20Net.jpg",
+              "price_range": "\u20b925 - \u20b945 per sq. meter"
+            },
+            {
+              "name": "Tata Rallis Ralligold",
+              "type": "biostimulant",
+              "description": "Mycorrhiza-based product that enhances root biomass and helps the plant withstand abiotic stress like frost.",
+              "application_rate": "100g per tree applied in the root zone during early spring.",
+              "purchase_link": "https://www.amazon.in/s?k=Tata+Rallis+Ralligold+agriculture",
+              "image_url": "https://agripariwar.com/wp-content/uploads/2025/06/RALLIGOLD.jpg",
+              "price_range": "Varies"
+            }
+          ]
+        },
+        {
+          "category": "Soil Management",
+          "recommendation": "Apply soil conditioners to improve the loamy soil's structure and water-holding capacity, reducing the impact of nutrient leaching on slopes.",
+          "expected_improvement": "8-10% improvement in nutrient retention",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "UPL Zeba",
+              "type": "soil conditioner",
+              "description": "A starch-based superabsorbent granule that retains moisture and nutrients in the root zone.",
+              "application_rate": "30-50g per tree mixed into the soil during the dormant or early growth stage.",
+              "purchase_link": "https://www.amazon.in/s?k=UPL+Zeba+agriculture",
+              "image_url": "https://nz.uplcorp.com/product_images/ZebaPackshot.png",
+              "price_range": "Varies"
+            }
+          ]
+        },
+        {
+          "category": "Pest Control",
+          "recommendation": "Monitor and manage San Jose Scale and Woolly Apple Aphid, which often thrive in the Shimla climate. Use premium oils during dormancy to suffocate overwintering pests.",
+          "expected_improvement": "10% reduction in tree vigor loss and fruit spotting",
+          "priority": "Medium",
+          "products": [
+            {
+              "name": "HP Spray Oil / Servo Orchard Spray Oil",
+              "type": "insecticide/miticide",
+              "description": "Horticultural mineral oil used for controlling San Jose Scale and mite eggs during the dormant stage.",
+              "application_rate": "20 liters in 1000 liters of water (2% concentration) during late dormancy.",
+              "purchase_link": "https://dir.indiamart.com/search.mp?ss=Servo+Orchard+Spray+Oil",
+              "image_url": "https://prasoonagro.com/wp-content/uploads/2024/05/servo-orchard-spray-oil-10-ltr-3.jpeg",
+              "price_range": "\u20b93,800 - \u20b95,200 (per 20 Litre Drum)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

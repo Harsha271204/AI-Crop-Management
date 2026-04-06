@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropAI - AI-Powered Crop Yield Prediction</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+</head>
+<body>
+    <div id="loginPage" class="auth-container">
+        <div class="auth-background">
+            <div class="auth-gradient"></div>
+            <div class="auth-pattern"></div>
+        </div>
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <span class="material-symbols-outlined">eco</span>
+                    <span>CropAI</span>
+                </div>
+                <p class="auth-subtitle">AI-Powered Crop Yield Prediction & Optimization</p>
+            </div>
+            
+            <div id="loginForm" class="auth-form">
+                <form id="loginFormElement">
+                    <h2>Welcome Back</h2>
+                    <p class="auth-description">Sign in to access your dashboard</p>
+                    
+                    <div class="form-group">
+                        <label for="loginEmail">
+                            <span class="material-symbols-outlined">mail</span>
+                            Email Address
+                        </label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email" required autocomplete="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">
+                            <span class="material-symbols-outlined">lock</span>
+                            Password
+                        </label>
+                        <div class="input-with-icon">
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required autocomplete="current-password">
+                            <button type="button" class="toggle-password">
+                                <span class="material-symbols-outlined">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Sign In</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+                
+                <p class="auth-switch">
+                    Don't have an account? <a href="#" id="showSignup">Create Account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="signupPage" class="auth-container hidden">
+        <div class="auth-background">
+            <div class="auth-gradient"></div>
+            <div class="auth-pattern"></div>
+        </div>
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <span class="material-symbols-outlined">eco</span>
+                    <span>CropAI</span>
+                </div>
+                <p class="auth-subtitle">AI-Powered Crop Yield Prediction & Optimization</p>
+            </div>
+            
+            <form id="signupForm" class="auth-form">
+                <h2>Create Account</h2>
+                <p class="auth-description">Join CropAI for smart farming insights</p>
+                
+                <div class="form-group">
+                    <label for="signupName">
+                        <span class="material-symbols-outlined">person</span>
+                        Full Name
+                    </label>
+                    <input type="text" id="signupName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupEmail">
+                        <span class="material-symbols-outlined">mail</span>
+                        Email Address
+                    </label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupPassword">
+                        <span class="material-symbols-outlined">lock</span>
+                        Password
+                    </label>
+                    <div class="input-with-icon">
+                        <input type="password" id="signupPassword" placeholder="Create a password (min 6 chars)" required minlength="6">
+                        <button type="button" class="toggle-password">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupConfirmPassword">
+                        <span class="material-symbols-outlined">lock</span>
+                        Confirm Password
+                    </label>
+                    <div class="input-with-icon">
+                        <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    <span>Create Account</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                
+                <p class="auth-switch" style="margin-top: 1.5rem;">
+                    Already have an account? <a href="#" id="showLogin">Sign In</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div id="mainApp" class="app-container hidden">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span class="material-symbols-outlined">eco</span>
+                <span class="brand-text">CropAI</span>
+            </div>
+            
+            <div class="navbar-menu">
+                <a href="#" class="nav-link active" data-section="dashboard" id="navDashboard">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link" data-section="history" id="navHistory">
+                    <span class="material-symbols-outlined">history</span>
+                    <span>History</span>
+                </a>
+                <a href="#" class="nav-link" data-section="analytics" id="navAnalytics">
+                    <span class="material-symbols-outlined">analytics</span>
+                    <span>Analytics</span>
+                </a>
+            </div>
+            
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+                
+                <div class="notification-bell" id="notificationBell">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="notification-badge" id="notificationCount">0</span>
+                </div>
+                
+                <div class="user-menu" id="userMenuBtn">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <span class="user-name" id="userName">User</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </div>
+                
+                <div class="user-dropdown hidden" id="userDropdown">
+                    <a href="#" class="dropdown-item" id="profileBtn">
+                        <span class="material-symbols-outlined">person</span>
+                        Profile Settings
+                    </a>
+                    <a href="#" class="dropdown-item" id="preferencesBtn">
+                        <span class="material-symbols-outlined">settings</span>
+                        Preferences
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item" id="logoutBtn">
+                        <span class="material-symbols-outlined">logout</span>
+                        Sign Out
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div id="dashboardSection" class="section-content">
+                <div class="dashboard-header">
+                    <div class="welcome-section">
+                        <h1>Welcome back, <span id="welcomeName">User</span></h1>
+                        <p>Get AI-powered insights for your crops</p>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="stat-card">
+                            <span class="material-symbols-outlined">query_stats</span>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalPredictions">0</span>
+                                <span class="stat-label">Predictions</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="material-symbols-outlined">agriculture</span>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalCrops">0</span>
+                                <span class="stat-label">Crops Analyzed</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            <div class="stat-info">
+                                <span class="stat-value" id="avgImprovement">0%</span>
+                                <span class="stat-label">Avg Yield</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                <section class="input-section">
+                    <div class="card input-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <span class="material-symbols-outlined">add_circle</span>
+                                <h2 class="card-title">New Prediction</h2>
+                            </div>
+                            <span class="card-badge">AI Powered</span>
+                        </div>
+                        
+                        <div class="input-tabs">
+                            <button class="tab-btn active" data-tab="location">
+                                <span class="material-symbols-outlined">location_on</span>
+                                Location
+                            </button>
+                            <button class="tab-btn" data-tab="crop">
+                                <span class="material-symbols-outlined">grass</span>
+                                Crop Details
+                            </button>
+                            <button class="tab-btn" data-tab="advanced">
+                                <span class="material-symbols-outlined">tune</span>
+                                Advanced
+                            </button>
+                        </div>
+                        
+                        <div class="tab-content active" id="locationTab">
+                            <div class="location-section">
+                                <div class="location-actions">
+                                    <button type="button" id="detectLocationBtn" class="btn btn-outline">
+                                        <span class="material-symbols-outlined">my_location</span>
+                                        Auto Detect Location
+                                    </button>
+                                    <button type="button" class="btn btn-ghost" onclick="openMapPicker()">
+                                        <span class="material-symbols-outlined">map</span>
+                                        Pick on Map
+                                    </button>
+                                </div>
+                                <div id="locationStatus" class="location-status"></div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="latitude">
+                                            <span class="material-symbols-outlined">north</span>
+                                            Latitude
+                                        </label>
+                                        <input type="number" id="latitude" step="any" placeholder="e.g., 28.6139" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="longitude">
+                                            <span class="material-symbols-outlined">east</span>
+                                            Longitude
+                                        </label>
+                                        <input type="number" id="longitude" step="any" placeholder="e.g., 77.2090" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="cropTab">
+                            <div class="crop-section">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cropName">
+                                            <span class="material-symbols-outlined">eco</span>
+                                            Crop Name *
+                                        </label>
+                                        <input type="text" id="cropName" placeholder="e.g., Wheat, Rice, Corn" required list="cropSuggestions">
+                                        <datalist id="cropSuggestions">
+                                            <option value="Wheat">
+                                            <option value="Rice">
+                                            <option value="Corn">
+                                            <option value="Soybean">
+                                            <option value="Cotton">
+                                            <option value="Sugarcane">
+                                            <option value="Potato">
+                                            <option value="Tomato">
+                                            <option value="Onion">
+                                            <option value="Groundnut">
+                                        </datalist>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fieldSize">
+                                            <span class="material-symbols-outlined">square_foot</span>
+                                            Field Size (hectares) *
+                                        </label>
+                                        <input type="number" id="fieldSize" step="0.1" min="0.1" placeholder="e.g., 10" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="plantingDate">
+                                            <span class="material-symbols-outlined">calendar_month</span>
+                                            Planting Date
+                                        </label>
+                                        <input type="date" id="plantingDate">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="irrigationType">
+                                            <span class="material-symbols-outlined">water_drop</span>
+                                            Irrigation Type
+                                        </label>
+                                        <select id="irrigationType">
+                                            <option value="">Select irrigation type</option>
+                                            <option value="Drip">Drip Irrigation</option>
+                                            <option value="Sprinkler">Sprinkler</option>
+                                            <option value="Flood">Flood/Surface</option>
+                                            <option value="Rainfed">Rainfed</option>
+                                            <option value="Center Pivot">Center Pivot</option>
+                                            <option value="Furrow">Furrow</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="advancedTab">
+                            <div class="advanced-section">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="previousCrop">
+                                            <span class="material-symbols-outlined">history</span>
+                                            Previous Crop
+                                        </label>
+                                        <input type="text" id="previousCrop" placeholder="e.g., Soybean, Fallow">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="farmingExperience">
+                                            <span class="material-symbols-outlined">workspace_premium</span>
+                                            Farming Experience
+                                        </label>
+                                        <select id="farmingExperience">
+                                            <option value="">Select experience level</option>
+                                            <option value="Beginner">Beginner (0-2 years)</option>
+                                            <option value="Intermediate">Intermediate (3-7 years)</option>
+                                            <option value="Experienced">Experienced (8-15 years)</option>
+                                            <option value="Expert">Expert (15+ years)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="budgetLevel">
+                                            <span class="material-symbols-outlined">payments</span>
+                                            Budget Level
+                                        </label>
+                                        <select id="budgetLevel">
+                                            <option value="">Select budget level</option>
+                                            <option value="Low">Low Budget</option>
+                                            <option value="Medium">Medium Budget</option>
+                                            <option value="High">High Budget</option>
+                                            <option value="Premium">Premium/No Limit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" id="analyzeBtn" class="btn btn-primary btn-full btn-large">
+                            <span class="btn-text">
+                                <span class="material-symbols-outlined">auto_awesome</span>
+                                Analyze & Predict
+                            </span>
+                            <span class="btn-loader hidden">
+                                <span class="loader"></span>
+                                Processing...
+                            </span>
+                        </button>
+                    </div>
+                </section>
+
+                <section id="resultsSection" class="results-section hidden">
+                    <div id="processingLog" class="processing-log card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <span class="material-symbols-outlined">terminal</span>
+                                <h3>AI Processing Pipeline</h3>
+                            </div>
+                            <div class="processing-status">
+                                <span class="status-dot"></span>
+                                <span id="processingStatusText">Processing</span>
+                            </div>
+                        </div>
+                        <div id="logMessages" class="log-messages"></div>
+                    </div>
+
+                    <div class="results-grid">
+                        <div class="card result-card glass-effect">
+                            <div class="result-icon location-icon">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <h3 class="card-subtitle">Location Analysis</h3>
+                            <div id="locationResults" class="result-content"></div>
+                        </div>
+                        <div class="card result-card glass-effect">
+                            <div class="result-icon weather-icon">
+                                <span class="material-symbols-outlined">partly_cloudy_day</span>
+                            </div>
+                            <h3 class="card-subtitle">Weather Conditions</h3>
+                            <div id="weatherResults" class="result-content"></div>
+                        </div>
+                        <div class="card result-card glass-effect">
+                            <div class="result-icon soil-icon">
+                                <span class="material-symbols-outlined">landscape</span>
+                            </div>
+                            <h3 class="card-subtitle">Soil Analysis</h3>
+                            <div id="soilResults" class="result-content"></div>
+                        </div>
+                    </div>
+
+                    <div class="card yield-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <span class="material-symbols-outlined">trending_up</span>
+                                <h3 class="card-subtitle">Yield Prediction</h3>
+                            </div>
+                            <div class="confidence-badge" id="confidenceBadge">
+                                <span class="material-symbols-outlined">verified</span>
+                                <span>High Confidence</span>
+                            </div>
+                        </div>
+                        <div id="yieldResults" class="yield-content"></div>
+                    </div>
+
+                    <div class="card optimizations-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <span class="material-symbols-outlined">lightbulb</span>
+                                <h3 class="card-subtitle">AI Recommendations</h3>
+                            </div>
+                            <div class="filter-tabs">
+                                <button class="filter-btn active" data-filter="all">All</button>
+                                <button class="filter-btn" data-filter="high">High Priority</button>
+                                <button class="filter-btn" data-filter="products">Products</button>
+                            </div>
+                        </div>
+                        <div id="optimizationsResults" class="optimizations-content"></div>
+                    </div>
+                    
+                    <div class="action-bar">
+                        <button class="btn btn-outline" id="resetBtn">
+                            <span class="material-symbols-outlined">refresh</span>
+                            Reset Form
+                        </button>
+                        <button class="btn btn-primary" id="saveHistoryBtn">
+                            <span class="material-symbols-outlined">bookmark</span>
+                            Save to History
+                        </button>
+                    </div>
+                </section>
+            </div>
+            </div>
+
+            <div id="historySection" class="section-content hidden">
+                <div class="section-header">
+                    <h2><span class="material-symbols-outlined">history</span> Prediction History</h2>
+                    <p>View and manage your past crop yield predictions</p>
+                </div>
+                <div id="historyContent" class="history-content">
+                    <div class="loading-state">
+                        <span class="loader"></span>
+                        <p>Loading history...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="analyticsSection" class="section-content hidden">
+                <div class="section-header">
+                    <h2><span class="material-symbols-outlined">analytics</span> Analytics Dashboard</h2>
+                    <p>Insights and statistics from your predictions</p>
+                </div>
+                <div id="analyticsContent" class="analytics-content">
+                    <div class="loading-state">
+                        <span class="loader"></span>
+                        <p>Loading analytics...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profileSection" class="section-content hidden">
+                <div class="section-header">
+                    <h2><span class="material-symbols-outlined">person</span> Profile Settings</h2>
+                    <p>Manage your account information</p>
+                </div>
+                <div class="profile-content">
+                    <div class="card">
+                        <h3 class="card-subtitle">Account Information</h3>
+                        <form id="profileForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileName">Full Name</label>
+                                    <input type="text" id="profileName" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileEmail">Email Address</label>
+                                    <input type="email" id="profileEmail" placeholder="Your email" readonly title="Email cannot be changed">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <span class="material-symbols-outlined">save</span>
+                                Save Changes
+                            </button>
+                        </form>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-subtitle">Change Password</h3>
+                        <form id="passwordForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" id="currentPassword" placeholder="Enter current password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" placeholder="Enter new password">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-outline">
+                                <span class="material-symbols-outlined">lock</span>
+                                Update Password
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="preferencesSection" class="section-content hidden">
+                <div class="section-header">
+                    <h2><span class="material-symbols-outlined">settings</span> Preferences</h2>
+                    <p>Customize your application settings</p>
+                </div>
+                <div class="preferences-content">
+                    <div class="card">
+                        <h3 class="card-subtitle">Display Settings</h3>
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <span class="preference-label">Dark Mode</span>
+                                <span class="preference-description">Switch between light and dark theme</span>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <span class="preference-label">Email Notifications</span>
+                                <span class="preference-description">Receive prediction reports via email</span>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="emailNotificationsToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-subtitle">Units & Measurements</h3>
+                        <div class="form-group">
+                            <label for="preferredUnits">Preferred Units</label>
+                            <select id="preferredUnits">
+                                <option value="metric">Metric (kg, hectares)</option>
+                                <option value="imperial">Imperial (lbs, acres)</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="savePreferencesBtn">
+                            <span class="material-symbols-outlined">save</span>
+                            Save Preferences
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>CropAI - AI-Powered Agricultural Intelligence</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast hidden">
+        <span class="material-symbols-outlined toast-icon">check_circle</span>
+        <span class="toast-message"></span>
+    </div>
+
+    <div id="notificationPanel" class="notification-panel hidden">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="btn btn-ghost" id="clearNotifications">Clear All</button>
+        </div>
+        <div id="notificationList" class="notification-list">
+            <div class="notification-empty">
+                <span class="material-symbols-outlined">notifications_none</span>
+                <p>No notifications yet</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mapModal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeMapModal()"></div>
+        <div class="modal-content map-modal-content">
+            <button class="modal-close" onclick="closeMapModal()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <h3 style="margin-bottom: 1rem;">Pick Location on Map</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Click on the map to select a location</p>
+            <div id="mapContainer" style="height: 400px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);"></div>
+            <div class="map-coords" style="margin-top: 1rem; display: flex; gap: 1rem; align-items: center;">
+                <span><strong>Lat:</strong> <span id="mapLat">-</span></span>
+                <span><strong>Lng:</strong> <span id="mapLng">-</span></span>
+                <button class="btn btn-primary" id="confirmMapLocation" style="margin-left: auto;">
+                    <span class="material-symbols-outlined">check</span>
+                    Confirm Location
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
